@@ -1,0 +1,81 @@
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color-white: #FFFFFF;
+    --color-secondary: #2F0D0C;
+    --color-primary: #CC312D;
+    --colot-body: #EBEBEB;
+    --color-badge: #448CF91A;
+    --color-body: #606060;
+    --border-radius-dashbord: 2rem;
+    --border-radius-badge: 1rem;
+    --border-radius-full: 100%;
+    --color-border-processing-badge: #2E7AF1;
+    --color-delivered-badge: #1BAC441A;
+    --color-return-badge: #1717171A;
+    --color-dashbord: #1717171A;
+    --color-canceled-badge: #E5303F1A;
+    --font-size-price: 2.4rem;
+    --font-size-badge: 1.2rem;
+    --font-family: "vazir";
+    --font-family-bold: "vazirBold";
+    --font-family-regular: "vazirRegular";
+    --font-family-light: "vazirLight";
+    --border-primary: "1px solid #CC312D";
+    --padding-primary: 1rem;
+}
+
+body {
+    font-family: var(--font-family-bold);
+    padding: 1rem;
+}
+
+@media screen and (mim-width:640px) {
+    body {
+        padding: 2rem;
+    }
+
+}
+
+.container {
+    max-width: 1120px;
+    margin: auto;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+.icon {
+    width: 2.8rem;
+}
+
+.line {
+    width: 100%;
+    height: .5px;
+    background-color: var(--color-return-badge);
+    margin: 1rem 0 2rem 0;
+}
+
+/* ! grid mobile  */
+
+main{
+    display: grid ;
+    grid-template-columns:1fr;
+grid-template-rows: auto;
+}
+
+.inormation-user , .information-buy{
+    height: 1rem;
+    background-color: #cf2222;
+}
+
+/* ! repandive desktop */
+@media screen and (min-width:760px) {
+    main{
+        grid-template-columns: 3fr 1fr;
+        gap: 1rem;
+    }
+}
