@@ -6,6 +6,7 @@ html {
     --color-white: #FFFFFF;
     --color-secondary: #F7F7F7;
     --color-primary: #CC312D;
+    --color-sopping-card: #E5303F1A;
     --colot-body: #EBEBEB;
     --color-content: #448CF91A;
     --color-body: #606060;
@@ -29,13 +30,17 @@ html {
 
 body {
     font-family: var(--font-family-bold);
-    
+
     padding: 1rem;
 }
 
 body,
 label,
-input,h2,select,option,textarea {
+input,
+h2,
+select,
+option,
+textarea {
     font-family: var(--font-family);
     /* font-weight: 400; */
 
@@ -56,10 +61,12 @@ input,h2,select,option,textarea {
 p {
     font-size: 1.4rem;
 }
-h2{
+
+h2 {
     font-size: 1.6rem;
 }
-.bold-text{
+
+.bold-text {
     font-size: 2.2rem;
 }
 
@@ -86,6 +93,12 @@ main {
 
 }
 
+/* .information-user{
+    overflow-y: auto;
+    height: 95vh;
+    padding-left: 1rem;
+} */
+
 .information-user,
 .information-buy {
     padding: 1rem;
@@ -101,6 +114,7 @@ main {
 }
 
 
+
 /* ! repandive desktop */
 @media screen and (min-width:1100px) {
     main {
@@ -108,9 +122,11 @@ main {
         gap: 1rem;
     }
 }
-form{
+
+form {
     padding: 1rem;
 }
+
 .respansive--input {
     display: grid;
     grid-template-columns: 1fr;
@@ -131,7 +147,9 @@ form{
 
 /* style input */
 
-input, select,textarea {
+input,
+select,
+textarea {
 
     width: 100%;
     border: none;
@@ -140,41 +158,121 @@ input, select,textarea {
     border-radius: var(--border-radius-input);
     background-color: var(--color-secondary);
 }
-input:focus , select:focus{
+
+input:focus,
+select:focus {
     outline: none;
     border: .5px solid var(--color-content);
-    box-shadow: .1px .1px  1px var(--color-body) ;
+    box-shadow: .1px .1px 1px var(--color-body);
     transition: all .5s;
 
 }
-label{
+
+label {
     display: block;
     margin: 2rem 0 .7rem 0;
     font-size: 1.4rem;
-color: var(--color-body);
+    color: var(--color-body);
 }
 
 /* address register */
-.address-register{
+.address-register {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 4rem;
 }
-.address-register a{
+
+.address-register a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     color: var(--color-primary);
 }
+
 /* ! DESCRIPTION TEXT */
 
-.description-text{
-width: 100%;
-padding: 1.5rem;
-border-radius:2rem;
+.description-text {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 2rem;
 }
 
-.description-text:focus{
+.description-text:focus {
     outline: none;
+}
+
+
+/*  */
+.method-send--heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.show-shoping-number {
+    padding: 1rem;
+    background-color: var(--color-sopping-card);
+    color: var(--color-primary);
+    font-weight: bolder;
+    border-radius: var(--border-radius-input);
+}
+
+/* ! option send */
+.option-send {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width:640px) {
+    .option-send {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+.option-input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.option-input input {
+    width: 2rem;
+
+}
+
+.option-input input:checked {
+    width: 2rem;
+    accent-color: var(--color-primary);
+
+}
+
+
+.option-input label {
+    margin: 0;
+}
+
+.option-send-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: var(--border-radius-input);
+}
+
+.option-send-item:hover {
+    border: 1px solid var(--color-primary);
+    transition: all .5s;
+}
+
+
+/* information buy */
+.information-buy {
+    background-color: var(--color-secondary);
 }
